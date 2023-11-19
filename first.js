@@ -39,3 +39,27 @@ const toArr = (...newArr)=>{
     return newArr
 }
 console.log(toArr(2,3,5,4))
+
+//Destructuring
+
+const {name , play} = person;
+console.log(name,play)
+// const search = (person)=>{
+//     console.log(person.name)
+// }
+// search(person)
+
+//changing data of obj
+person.name = "Malik Taimoor Ali Awan"
+person["play"] = false
+
+const search = ({name,play})=>{
+    console.log(name , play)
+}
+search(person)
+
+// Arr
+let hobbies = ['football','cricket']
+
+const [hobby1,hobby2]=hobbies
+console.log(hobby1,hobby2)

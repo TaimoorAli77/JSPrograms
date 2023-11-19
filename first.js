@@ -63,3 +63,9 @@ let hobbies = ['football','cricket']
 
 const [hobby1,hobby2]=hobbies
 console.log(hobby1,hobby2)
+
+
+console.log("G")
+setTimeout(()=>{
+    console.log("ds")
+},3000)

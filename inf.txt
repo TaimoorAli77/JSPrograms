@@ -1,1 +1,5 @@
 node js Notes
+
+request and response => which is used to return a response to whoever sends that request
+req --- will contain data about the request
+res--- will help you send response

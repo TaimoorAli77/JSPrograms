@@ -1,12 +1,7 @@
 
-const obj = {
-    name: "Taimoor",
-    rol:89,
-    add:function(){
-        console.log("G kia hal ha ", this.name)
-    },
-    addT(){
-        console.log("G kia hal ha ", this.name)
-    }
+let arr = ["Taimoor", false, 90,"Google"]
+for (let one of arr) {
+    console.log(one)
 }
-obj.addT()
+console.log(arr.map(s=>"S : "  + s))
+console.log(arr)

@@ -5,6 +5,17 @@ req --- will contain data about the request      (req data that we will get)
 res--- will help you send response   (res data that we will send)
 
 
-
+console.log(req.url,req.header,req.method)
 res.setHeader('Location','/')
 return res.end()
+
+node App.js
+npm init
+"start": "node App.js"
+npm start
+"start-server":"node App.js"
+npm run start-server
+
+"start": "nodemon App.js",
+
+go to debug and add configuration  and add in file "runtimeExecutable": "nodemon" & console:  intergratedterminal

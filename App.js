@@ -1,5 +1,15 @@
-const http = require('http')
-const routes = require('./routes.js')
-console.log(routes.someText)
-const server = http.createServer(routes.handler)
-server.listen(9090)
+const express = require('express')
+const app = express()
+// const routes = require('./routes.js')
+// console.log(routes.someText)
+app.use((req, res, next) => {
+    console.log("middleware ")
+    next()
+})
+
+app.use((req, res, next) => {
+    console.log("middleware Second")
+    res.send("<h1>Welcome Back</h1>")
+})
+
+app.listen(9090)

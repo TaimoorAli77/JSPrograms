@@ -6,8 +6,14 @@ res--- will help you send response   (res data that we will send)
 
 
 console.log(req.url,req.header,req.method)
+
+
 res.setHeader('Location','/')
 return res.end()
+instead use    
+    res.redirect('/')
+
+
 
 node App.js
 npm init
@@ -19,3 +25,39 @@ npm run start-server
 "start": "nodemon App.js",
 
 go to debug and add configuration  and add in file "runtimeExecutable": "nodemon" & console:  intergratedterminal
+
+we are able to parse incoming request bodies with the help of body parser
+npn install --save body-parser
+app.use(bodyParser.urlencoded({extended:false}))
+console.log(req.body)
+
+
+app.use(bodyParser.urlencoded({extended:false}))
+For .css static files to access
+app.use(express.static(path.join(__dirname,'public')));
+
+
+
+
+..In another folder
+const express= require('express')
+const router = express.Router();
+const path = require('path')
+const rootDir =  require('../util/path')
+
+router.get('/add-product',(req, res, next) => {
+    res.sendFile(path.join(rootDir,'views','add-product.html'))
+})
+
+router.post('/add-product',(req, res, next) => {
+    console.log(req.body)
+    res.redirect('/')
+})
+
+.. in app.js main file  accessed and used as plus additional path "/admin" so accessed via "/admin/add-product"
+const adminRouter = require('./routes/admin.js')
+app.use("/admin",adminRouter)
+
+
+
+module.exports = router

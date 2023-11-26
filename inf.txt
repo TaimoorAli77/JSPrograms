@@ -61,3 +61,17 @@ app.use("/admin",adminRouter)
 
 
 module.exports = router
+
+
+
+exports.routes= router;
+exports.products=products;
+
+Templating Engines
+npm install --save ejs pug express-handlebars
+
+
+app.set('view engine', 'pug')
+app.set('views','views')      //path for html files
+
+res.render('shop') will use the default Templating engine and look for that pug or other file with that name

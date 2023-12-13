@@ -1,5 +1,5 @@
 node js Notes
-
+https://www.youtube.com/watch?v=DUg2SWWK18I&list=PLZlA0Gpn_vH8jbFkBjOuFjhxANC63OmXM&index=21        vip tatyrial by dev simplified
 request and response => which is used to return a response to whoever sends that request
 req --- will contain data about the request      (req data that we will get)
 res--- will help you send response   (res data that we will send)
@@ -27,7 +27,7 @@ npm run start-server
 go to debug and add configuration  and add in file "runtimeExecutable": "nodemon" & console:  intergratedterminal
 
 we are able to parse incoming request bodies with the help of body parser
-npn install --save body-parser
+npm install --save body-parser
 app.use(bodyParser.urlencoded({extended:false}))
 console.log(req.body)
 
